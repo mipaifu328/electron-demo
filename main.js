@@ -4,7 +4,7 @@
  * @Author: mipaifu328
  * @Date: 2022-05-25 14:12:26
  * @LastEditors: mipaifu328
- * @LastEditTime: 2022-05-25 14:42:51
+ * @LastEditTime: 2022-05-25 16:46:56
  */
 const { app, BrowserWindow, ipcMain, Notification } = require("electron")
 
@@ -31,9 +31,9 @@ const handleIPC = () => {
     }
   )
 }
-
+let win
 const createMainWindow = () => {
-  const win = new BrowserWindow({
+  win = new BrowserWindow({
     width: 250,
     height: 350,
     webPreferences: {
